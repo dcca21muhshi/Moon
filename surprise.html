@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise Envelope 💌</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;500&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff6f9, #ffeaf2, #ffdbe8);
+      overflow-x: hidden;
+      color: #4a3b3b;
+    }
+
+    /* ENVELOPE COVER */
+    .envelope-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+      transition: opacity 1s ease;
+    }
+
+    .envelope {
+      position: relative;
+      width: 220px;
+      height: 140px;
+      background: #ffcce0;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+      cursor: pointer;
+      transition: transform 0.4s ease;
+    }
+
+    .envelope:hover {
+      transform: scale(1.05);
+    }
+
+    .envelope::before,
+    .envelope::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+
+    .envelope::before {
+      top: 0;
+      left: 0;
+      border-width: 0 110px 70px 110px;
+      border-color: transparent transparent #ffb6c1 transparent;
+    }
+
+    .envelope::after {
+      bottom: 0;
+      left: 0;
+      border-width: 70px 110px 0 110px;
+      border-color: #ffe6eb transparent transparent transparent;
+    }
+
+    .envelope-heart {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2em;
+      color: #e55d85;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.2); }
+    }
+
+    .open-text {
+      font-family: 'Dancing Script', cursive;
+      color: #b65a7a;
+      font-size: 1.7em;
+      margin-top: 25px;
+      animation: fadein 2s ease infinite alternate;
+    }
+
+    @keyframes fadein {
+      from { opacity: 0.5; }
+      to { opacity: 1; }
+    }
+
+    /* CERTIFICATES SECTION */
+    .certificates-section {
+      display: none;
+      text-align: center;
+      animation: fadeUp 1.5s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      font-family: 'Dancing Script', cursive;
+      color: #c26b8d;
+      font-size: 2.3em;
+      margin-top: 40px;
+    }
+
+    .certificates {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .certificate {
+      background: #fff9fb;
+      border: 1px solid #ffdce5;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(255, 182, 193, 0.3);
+      padding: 25px;
+      max-width: 550px;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .certificate:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 25px rgba(255, 182, 193, 0.4);
+    }
+
+    h2 {
+      color: #b66984;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    embed {
+      width: 100%;
+      height: 600px;
+      border-radius: 12px;
+      border: 1px solid #ffd9e6;
+      box-shadow: 0 3px 15px rgba(255, 182, 193, 0.2);
+    }
+
+    a.home-link {
+      display: block;
+      text-align: center;
+      background: linear-gradient(135deg, #ffb6c1, #ffcce0);
+      color: white;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      width: fit-content;
+      margin: 40px auto;
+      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+      transition: 0.3s;
+    }
+
+    a.home-link:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff99bb, #ffd6e6);
+    }
+
+    @media (max-width: 768px) {
+      embed { height: 400px; }
+      h2 { font-size: 1.4em; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ENVELOPE COVER -->
+  <div class="envelope-container" id="envelopeCover">
+    <div class="envelope" onclick="openEnvelope()">
+      <div class="envelope-heart">💌</div>
+    </div>
+    <div class="open-text">Tap to open your surprise, Shaju 💖</div>
+  </div>
+
+  <!-- CERTIFICATES SECTION -->
+  <div class="certificates-section" id="certificates">
+    <header> For yuh Shaju 🎀</header>
+
+    <div class="certificates">
+      <div class="certificate">
+        <h2>In Sha Allah 💖</h2>
+        <embed src="tt.pdf" type="application/pdf" />
+      </div>
+
+      <div class="certificate">
+        <h2> RECOGNITION 🌷</h2>
+        <embed src="BDC.pdf" type="application/pdf" />
+      </div>
+    </div>
+
+    <a href="index.html" class="home-link">🏠 Back to Home</a>
+  </div>
+
+  <script>
+    function openEnvelope() {
+      document.getElementById('envelopeCover').style.opacity = '0';
+      setTimeout(() => {
+        document.getElementById('envelopeCover').style.display = 'none';
+        document.getElementById('certificates').style.display = 'block';
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>

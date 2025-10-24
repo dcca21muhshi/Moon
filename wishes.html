@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Wishes 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff0f5, #ffe6f2);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #d63384;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+      .page {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+    nav {
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-bottom: 3px solid #ffd6e8;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-top: 30px;
+      color: #cc2b7e;
+    }
+    nav a {
+      color: #d63384;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+    .message {
+      margin-top: 8px;
+      color: #333;
+      font-size: 1em;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #999;
+    }
+
+     .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 3px solid #ffe6f2;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .photo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(214, 51, 132, 0.4);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    /* Layout: 3 per row */
+    .scroll-wish-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+     .profile-pic {
+      width: 50px;
+      height: 55px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ffe6f2;
+      flex-shrink: 0;
+    }
+    .scroll-wish {
+      width: 300px;
+      background: #fff0f7;
+      border-radius: 25px;
+      padding: 20px;
+      border: 2px dashed #f8b6cf;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+
+    .scroll-wish:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(214, 51, 132, 0.3);
+    }
+
+    .scroll-wish h3 {
+      color: #b82d72;
+      font-family: 'Great Vibes', cursive;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .scroll-text {
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 10px;
+      text-align: left;
+      font-size: 1em;
+      color: #444;
+      background: #fff;
+      border-radius: 15px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .scroll-text::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scroll-text::-webkit-scrollbar-thumb {
+      background: #f8b6cf;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 900px) {
+      .scroll-wish {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+ <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Her</a>
+      <a href="memories.html" class="nav-link active">Our Memories</a>
+      <a href="wishes.html" class="nav-link">Wishes</a>
+      <a href="delulu.html">Delulu </a>
+       <a href="ehanie.html">🐾</a>
+      <a href="chapter.html" class="nav-link">V</a>
+      <a href="surprise.html" class="nav-link">Surprise</a>
+      <a href="divinecomfort.html" class="nav-link">For you🌙</a>
+    </nav>
+  </header>
+  <!-- 🎀 Hanging Birthday Decor (Top & Sides) -->
+<div class="hanging-decor top">
+  <div class="string">💖</div>
+  <div class="string">🌸</div>
+  <div class="string">🎀</div>
+  <div class="string">✨</div>
+  <div class="string">💎</div>
+  <div class="string">🦋</div>
+</div>
+
+<div class="hanging-decor side left">
+  <div class="side-string">🌷</div>
+  <div class="side-string">💞</div>
+  <div class="side-string">🧁</div>
+</div>
+
+<div class="hanging-decor side right">
+  <div class="side-string">💐</div>
+  <div class="side-string">🎀</div>
+  <div class="side-string">🌈</div>
+</div>
+
+<style>
+  /* 🌸 Common Styles */
+  .hanging-decor {
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  /* 🎀 Top Garland */
+  .hanging-decor.top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .string {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8em;
+    color: #ff7bbf;
+    animation: sway 3s ease-in-out infinite alternate;
+    transform-origin: top center;
+  }
+
+  .string::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 60px;
+    background: rgba(255, 182, 219, 0.8);
+    margin-bottom: 6px;
+    border-radius: 2px;
+  }
+
+  /* 💖 Side Hangers */
+  .hanging-decor.side {
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .hanging-decor.side.left { left: 0; margin-left: 10px; }
+  .hanging-decor.side.right { right: 0; margin-right: 10px; }
+
+  .side-string {
+    position: relative;
+    font-size: 1.8em;
+    animation: swaySide 3s ease-in-out infinite alternate;
+    transform-origin: top center;
+  }
+
+  .side-string::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 50px;
+    background: rgba(255, 182, 219, 0.7);
+    margin-bottom: 6px;
+    border-radius: 2px;
+  }
+
+  /* 🌈 Animations */
+  @keyframes sway {
+    0% { transform: rotate(-4deg); }
+    100% { transform: rotate(4deg); }
+  }
+
+  @keyframes swaySide {
+    0% { transform: rotate(-3deg); }
+    100% { transform: rotate(3deg); }
+  }
+
+  /* ✨ Soft Glow */
+  .string, .side-string {
+    text-shadow: 0 0 10px rgba(255, 192, 203, 0.6);
+  }
+  
+</style>
+
+  <h1>💖 Some words from your girlas to our October Baby 🎀</h1>
+  <div class="gallery">
+    <div class="photo"><img src="d6.jpg" alt="Shaju 1" style="object-fit: contain;" ></div>
+    <div class="photo"><img src="m2.jpg" alt="Shaju 2"></div>
+    <div class="photo"><img src="m3.jpeg" alt="Shaju 3"></div>
+  </div>
+
+
+  <div class="scroll-wish-container">
+    <div class="scroll-wish">
+      <h3><span class="name"><img class="profile-pic" src="sum.jpg" alt="Sumaiya Maryam" >🎀 From SM</span></h3>
+      <div class="scroll-text">
+        <p>Oh to my Heera🎀🤍<br><br>     
+  You’re a girl I’ve always seen so different from the rest someone who carries modesty like a crown🧕🏻 and perfection like second nature.💯 You’ve always been the one striving to be a good daughter, to make your parents proud, and I’ve watched that sincerity in you turn into something truly beautiful.Now seeing you as an Usthaada, teaching Tajweed across seas, spreading the beauty of the Qur’an to hearts around the world I can’t even describe how proud and happy I am for you. You’ve grown beautifully, shojiyatha and 
+I pray Allah increases your ‘ilm, strengthens your path, and makes you a woman of da’wah, guiding others through your Noor🤍🤍😘😘😘😘😘
+      You inspire us all (absolutely big yes💯💯💓💓) not just through your deen, but through your dedication, patience, and hard work. I wish to see you succeed in both dunya and Akhirah Shajithah bint Mujipur Rahman😍 to see every dream you whispered come to life in Shaa Allah ( Aameenn)💓🥰😘😘😘😘Whatever it is that your heart wishes for may Allah grant it to you in the purest, most halal and everlasting way, filling it with endless barakah, peace ✌🏼, love 💕 and ease.💐💐
+(Aameen ya rabbal alameen ya allah please make her every delulu to trululu aameen😻❣️) You’ve shared many dreams with me and maybe kept a few unsaid (just maybe because I knew all from the tea to fantacy of you) but I pray you win in every place your name reaches. You’re the girl I’m watching to win every Ummah’s heart, just like you already won mine ❤️frrrrr🌷🌷(vachiko sariya💐💐🎀)
+       And for the silent battles you hide behind that precious smile ❤️❤️may Allah bring you the kind of peace that softens your heart, heals every unseen wound, and fills your home and family with comfort, love, and protection. ( Girl say loudly aameen💗💗)
+      Always remember, even when things feel heavy ,Allah never forgets the ones who keep walking toward Him.( You are the precious one among his eyes😘😘😘😘) You’re seen, loved, and cherished more than words can ever say. (Sachibi)
+      Just know this my darloo, calm in my storms❤️❤️ my love and duas for you never fade. Even if we’re miles apart, never from my heart. (Aameen ya rabbal aalaameennn💓💓💓💓)
+Alhamdulillah 🤍🤍
+Shukr ya allah for this Chandini to me💓💓💓😍😍🥰🧕🏻👩🏼‍❤️‍👩🏼💋💋💋💋
+Always your,
+Habibti♥️</p>
+      </div>
+    </div>
+
+    <div class="scroll-wish">
+      <h3><img class="profile-pic" src="ss.jpeg">💎 From Saif</h3>
+      <div class="scroll-text">
+        <p>🎉Happy Birthday chandni💖<br><br>
+                College 4th sem-la dhaan namma friendship start achi aprm apadiye super strong aayiduchu!  
+              Before that, just "friend, van mate"... but apram full-time laughs, talks, trust ellam full-on level!  
+              Unnoda friendship en life-la best gift dhaan 😇  
+              Stress irukkum pothu nee sirikiratha namba epadi irunthom nu nenaicha apadiye calm aayiduren da…
+              In sha Allah
+              Allah unakku nalla health , happiness, success, and best future kudukkanum 🤲  
+              Un dreams ellaam real aaganum! 💪🔥
+              🤭Life full-a intha friendship maintain panlaam — vera level-a!
+              <b>Happy Birthday my dear lover!</b>🎂🎈  
+              Loads of love & dua always 💕
+              Hahahaha 🤣 🤣 🤣 🤣 
+              Once again Happy Birthday to you da siripu azhagi</p>
+      </div>
+    </div>
+    <div class="scroll-wish">
+      <h3><img class="profile-pic" src="h.jpeg">🌸 From Hasi Aapa</h3>
+      <div class="scroll-text">
+        <p>BarakAllah Fee Hayathika, fee Ilmika, fee Rizqika, fee shifathika, fee nikkahika ❤✨ Shaji💍 
+            May Allah help & protect you in all phase of Lyf💚✨</p>
+    </div>
+     </div>
+      <div class="scroll-wish">
+      <h3><img class="profile-pic" src="am.jpg">🌸 From Amru Kutty</h3>
+      <div class="scroll-text">
+        <p>Barakallah Shaji...My laughing partner..May your day be as Special as you are 💕.May Allah bless you with the best and only best In Sha Allah..Love you d Kalcho</p>
+      </div>
+    </div>
+    <div class="scroll-wish">
+      <h3>🌸 From Nafee</h3>
+      <div class="scroll-text">
+        <p>Happy happy birthday Shaji
+          May Allah bless you and your future with good deen and bundle of joy!! 🤩 Hurrah to our 10+ years of friendship and more to go! ✨
+
+                                         With love,
+                                          Nafeeyo</p>
+      </div>
+    </div>
+     <div class="scroll-wish">
+      <h3><span class="name"><img class="profile-pic" src="a.jpeg">😻 From Anaf</h3>
+      <div class="scroll-text">
+        <p> 
+        Assalamu alaikum Warahmatullahi Wabarakatuh 
+        🌸💫 Hey My Lovely Friend! 💫🌸
+          You’re that one person who can turn an ordinary day into something full of laughter and warmth! 😄✨
+          Your smile is brighter than sunshine, your kindness softer than a kitten’s fun🐾💕
+          And the way you speak Tamil so sweetly — even that can make anyone’s heart smile! 💬🌺
+          Stay the same happy, funny, and caring person you are —
+          because the world truly shines a little more with you in it 💖🐱
+          Happy birthday my lovely Shajitha🥰🥰 
+          May ALLAH bless you and shower his blessings upon and your family.... 
+          May ALLAH fulfill all of your justified wishes... 
+          May you live long, healthy and peaceful life with loads and loads of Happiness, wealth and prosperity.....
+          May success lay on your feets..... 
+          May ALLAH protects you from Evil Eyes👀, Bad Habits, Bad People and from each and every thing which cause you harm.....
+          May ALLAH bless you with all those which make you closer to him... 
+          May ALLAH  make you amongst his close servants .... 
+          May you get more than you Deserve🥰🥰..... 
+          Have an Awesome Day,Year, Life ahead.... 
+          Stay Happy😁, staysafe🫂, stay Blessed 🤲.... 
+          Aameen,Anafin </p>
+      </div>
+      </div>
+      <div class="scroll-wish">
+      <h3><img class="profile-pic" src="f1.jpg">🥰 From Farruhh</h3>
+      <div class="scroll-text">
+        <p>Happy Birthday Shajuu😍✨ Barakallahu Fee Hayatika Fee Shifayeka Fee Umrika Fee Nikkayika😘💞
+”Sometimes the most unexpected Friendships are the best once’s and yet memories are the most Precious things we’ll ever have”✨✨❤️🥰</p>
+      </div>
+    </div>
+          <div class="scroll-wish">
+      <h3><img class="profile-pic" src="if.jpeg">🌸 From Ifra</h3>
+      <div class="scroll-text">
+        <p>Baarakallah, Shaju🌙✨<br><br>  
+      ❣️May Allah bless your new age with endless barakah and happiness🤍 may He guide you toward success, peace, and strong imaan always💫 you’re truly a 💎 for me alhamdulillah for you❤️😘let’s keep growing in ur deen and dreams
+      Insha Allah🌸
+      And once again <b>Khoobsurat ladki ko salgirah bohat bohat mubarak ho😂</b></p>
+      </div>
+    </div>
+    <div class="scroll-wish">
+      <h3>🌸 From  </h3>
+      <div class="scroll-text">
+        <p> Wish you many more happy returns of the day Shaji✨❤️🦄
+        Find me who i am 😊
+        If you found ping me</p>
+      </div>
+      </div>
+       <div class="scroll-wish">
+      <h3><img class="profile-pic" src="saf.jpg">✨ From Saf </h3>
+      <div class="scroll-text">
+        <p> Assalamu alaikum Wa rahmathullahi Wa barakathuhu....barakallah humma fie ilmika fie shifayika fie hayathika fie nikahika shajiyooo my dear discussion partner 🙈we discuss lot of 💩 shits😂😹let's ready 2 make a cringe and continue our shit discussion till the lyf end...may allah reunion both of us in jannah....😘I luv u my gurl inni uhibbuka fillah </p>
+      </div>
+      </div>
+     <div class="scroll-wish">
+      <h3><img class="profile-pic" src="j.jpeg">🌸 From Jems</h3>
+      <div class="scroll-text">
+        <p>Barakallahu feekum shaji ma❤️
+        Your always my first priority of my best friend May Allah bless with you and still my dua your always support for me❤️I love you machan your always smile with you enjoy your life your dreams comes keep rocking machan😂still next meet your marriage and jannah ❤️all the best your future  </div>
+    </div>
+    <div class="scroll-wish">
+      <h3><img class="profile-pic" src="suha.jpg">🤍 From Suha ❣️</h3>
+      <div class="scroll-text">
+        <p>Barakallah, Shajii🌙✨
+      ❣️May Allah bless your new age with endless barakah and happiness🤍 may He guide you toward success, peace, and strong imaan always💫 you’re truly a 💎 for me alhamdulillah for you❤️😘let’s keep growing in ur deen and dreams Insha Allah🌸</p>
+        </div>
+    </div>
+     <div class="scroll-wish">
+      <h3><img class="profile-pic" src="mo.jpeg">🤍 From Mousika</h3>
+      <div class="scroll-text">
+        <p>On your birthday,🎂 I pray that Allah blesses you with a life full of happiness, peace, and prosperity.🥰 May He guide you in every step you take and fulfill all your dreams.😍 Happy Birthday,🤩🥳 and may Allah's blessings be with you always! ♥️😊</p>
+        </div>
+    </div>
+    <div class="scroll-wish">
+      <h3><img class="profile-pic" src="as.jpeg">🌸 From Asra</h3>
+      <div class="scroll-text">
+        <p>Barkallah shaji ❤️
+          May your b'day be filled with lots of happiness and love
+          Happy birthday shajiiiiiiiiii
+          Love you lots😘❤️</p>
+        </div>
+    </div>
+    <div class="scroll-wish">
+      <h3><img class="profile-pic" src="ri.jpg"> ❤️From Rizzzzviya Mam</h3>
+      <div class="scroll-text">
+        <p>Dear Shaji,<br>
+              May Allah bless this sweetest girl with all of her wishes and bright future...May your special day bring you lots of joy and happiness.... Keep doing your best in everything you do...
+              Stay blessed forever....🎈🎈🎈Happy birthday shajii❤️</p>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>

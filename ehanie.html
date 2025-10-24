@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ehanie Speaks to Mom 🐾</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;500&display=swap');
+
+    body {
+      background: linear-gradient(180deg, #fff5f8, #ffeaf3);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      color: #4a3b3b;
+      position: relative;
+      scroll-behavior: smooth;
+    }
+    .page {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+}
+    .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+    nav {
+      background:none;
+      box-shadow: 0;
+      border-bottom: 0;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #d63384;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+    header {
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      color: #ff8cb8;
+      font-size: 3em;
+    }
+
+    .letter-container {
+      position: relative;
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 20px;
+    }
+
+    .letter {
+      background: #ffffffb8;
+      padding: 40px;
+      border-radius: 25px;
+      box-shadow: 0 6px 15px rgba(255, 182, 193, 0.3);
+      border: 2px dashed #ffc2d4;
+      position: relative;
+      z-index: 2;
+    }
+
+    .paragraph {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      margin: 15px 0;
+      position: relative;
+    }
+
+    /* floating outside images */
+    .cat-photo {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      position: absolute;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      border: 4px solid #fff;
+      transition: transform 0.3s ease;
+      z-index: 1;
+    }
+
+    .cat-photo:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+
+    .signature {
+      text-align: right;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5em;
+      margin-top: 40px;
+      color: #ff9cc5;
+    }
+
+    .home-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff9acb, #ffd6e0);
+      color: white;
+      text-decoration: none;
+      font-family: "Poppins", cursive;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 3;
+    }
+
+    .home-link:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #ffb3d9, #ffcce7);
+    }
+
+    /* floating hearts/paws */
+    .floating-paws {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .paw {
+      position: absolute;
+      font-size: 2em;
+      animation: float 6s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      from { transform: translateY(100vh) rotate(0deg); opacity: 0.2; }
+      to { transform: translateY(-10vh) rotate(360deg); opacity: 0.5; }
+    }
+  </style>
+</head>
+<body>
+   <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Her</a>
+      <a href="memories.html" class="nav-link active">Our Memories</a>
+      <a href="wishes.html" class="nav-link">Wishes</a>
+      <a href="delulu.html">Delulu </a>
+       <a href="ehanie.html">🐾</a>
+       <a href="chapter.html" class="nav-link">V</a>
+      <a href="surprise.html" class="nav-link">Surprise</a>
+      <a href="divinecomfort.html" class="nav-link">For you🌙</a>
+    </nav>
+  </header>
+  <header>
+    <h1>🐱hello hello Ehanie Speaks 🐾</h1>
+    <p>“Meow! Hi Mom, it’s me — your fluffy little son 😸💗”</p>
+  </header>
+
+  <div class="letter-container">
+
+    <!-- floating outside photos -->
+    <img src="eh.jpeg" alt="Ehanie photo" class="cat-photo" style="top: -40px; left: -100px; transform: rotate(-8deg);">
+    <img src="eh1.jpeg" alt="Ehanie photo" class="cat-photo" style="top: 200px; right: -120px; transform: rotate(5deg);">
+    <img src="eh2.jpeg" alt="Ehanie photo" class="cat-photo" style="bottom: 120px; left: -120px; transform: rotate(4deg);">
+    <img src="eh3.jpeg" alt="Ehanie photo" class="cat-photo" style="bottom: -60px; right: -110px; transform: rotate(-5deg);">
+
+    <div class="letter">
+      <p class="paragraph">
+        Dear Shaju mummy [for today ,haha jk jk]💖,  
+        Thank you for all the cuddles, yummy treats. You are my favorite hooman in the whole wide world! 😽
+      </p>
+
+      <p class="paragraph">
+        I love how you talk to me, even when I don’t always listen. I notice every time you smile at me, and it makes me purr so loud I think the neighbors can hear! 🐾✨
+      </p>
+
+      <p class="paragraph">
+        Even when I think i'm the strongest one and pick fights with those thozhans, you still take care of me like no other. You make my world soft, warm, and safe, and I want to be your little furball forever. 💕
+      </p>
+
+      <p class="paragraph">
+        Remember the time you tried to work while I walked across your notebooks? I wasn’t trying to be naughty, I just wanted you to notice me! 😼 Every day with you is a new adventure, full of love, warmth, and sometimes tiny chaos — which I secretly enjoy.
+      </p>
+
+      <p class="paragraph">
+        I love watching you smile when I curl up beside you or when you let me sit on your shoulder while you read. Those are my favorite moments. You make me feel safe, happy, and cherished — even if I occasionally pick Shahi Mummy over yuh[Who doesn't love her,right?]😹.
+      </p>
+
+      <p class="paragraph">
+        Mom, I want you to know that I see everything you do for me. From filling my bowl on time to giving me belly rubs when I look sad,and when you let me hit you...that's my love language especially for you my crazy woman!!! I notice. Your love makes me feel like the luckiest little kitty alive 🐾💗
+        and I love you so much mama...and i wouldn't trade this bond for the world.
+      </p>
+
+      <p class="paragraph">
+        Sometimes I wish I could speak human words to tell you exactly how much I adore you. Since I can’t, I’ll just keep purring, rubbing my head against you, and curling up on your lap to show it instead 😻.
+      </p>
+
+      <p class="paragraph">
+        You are my whole world, Mom. My cozy blanket, my warm sunshine, my favorite hooman. I promise to be your little companion, your furry therapist, and your mischievous troublemaker — always. 💞
+        And I'll always thank Allah[SWT] for giving you as my mama . Don't cry mama... i know you look pretty even when you cry but that's no excuse for my Aesthetic mumma to cry!! okay?!
+      </p>
+
+      <p class="signature">
+        — With Whiskers & Purrs, <br> Ehanie 🐾
+      </p>
+    </div>
+  </div>
+
+  <a href="index.html#ehanie" class="home-link">🏠 Back to Home</a>
+
+  <div class="floating-paws">
+    <div class="paw" style="left: 10%; animation-delay: 0s;">🐾</div>
+    <div class="paw" style="left: 40%; animation-delay: 2s;">🐾</div>
+    <div class="paw" style="left: 70%; animation-delay: 4s;">🐾</div>
+    <div class="paw" style="left: 90%; animation-delay: 1s;">🐾</div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaju’s World 💗</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;500&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #fff6f9, #ffeaf2, #ffdbe8);
+      color: #4a3b3b;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 25px 10px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.3em;
+      color: #c26b8d;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      background: rgba(255, 240, 245, 0.7);
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #b64c7a;
+      background: #fff0f7;
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-weight: 500;
+      transition: 0.3s;
+      box-shadow: 0 2px 5px rgba(214, 51, 132, 0.2);
+    }
+
+    nav a:hover {
+      background: #ffd6e8;
+      transform: scale(1.05);
+    }
+
+    main {
+      text-align: center;
+      padding: 40px 20px 80px;
+    }
+
+    h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2em;
+      color: #c06282;
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 25px;
+      line-height: 1.8;
+      font-size: 1.1em;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #ffb6c1, #ffcce0);
+      border: none;
+      color: white;
+      border-radius: 30px;
+      padding: 12px 28px;
+      font-size: 1em;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      transition: 0.3s;
+      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.3);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background: linear-gradient(135deg, #ff99bb, #ffd6e6);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #b47b84;
+      padding: 25px 10px;
+    }
+
+    .petal {
+      position: fixed;
+      top: -10%;
+      width: 25px;
+      opacity: 0.7;
+      animation: fall 10s linear infinite;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    @media (max-width: 768px) {
+      header { font-size: 1.8em; }
+      h2 { font-size: 1.6em; }
+      .btn { width: 80%; font-size: 0.95em; }
+    }
+  </style>
+</head>
+<body>
+  <!-- floating petals -->
+  <img src="https://i.ibb.co/1LFLYkN/petal1.png" class="petal" style="left:10%; animation-delay:0s;">
+  <img src="https://i.ibb.co/1LFLYkN/petal1.png" class="petal" style="left:45%; animation-delay:3s;">
+  <img src="https://i.ibb.co/1LFLYkN/petal1.png" class="petal" style="left:75%; animation-delay:5s;">
+
+  <header>Welcome to Shaju’s World 💕</header>
+
+  <nav>
+    <a href="about.html">About</a>
+    <a href="memories.html">Memories</a>
+    <a href="delulu.html">Delulu</a>
+    <a href="ehanie.html">Ehanie</a>
+    <a href="selflesssister.html">Selfless Sister</a>
+    <a href="divinecomfort.html">Islamic Page</a>
+  </nav>
+
+  <main>
+    <h2>Happy Birthday to the Most Precious Soul 🎂💖</h2>
+    <p>
+      To the one who brings light even on dull days, laughter even in silence, and warmth even across distance —  
+      this space is built just for you, filled with memories, surprises, and love in every pixel.
+    </p>
+
+    <div class="buttons">
+      <button class="btn" onclick="location.href='about.html'">About Her 🌷</button>
+      <button class="btn" onclick="location.href='memories.html'">Memories 📸</button>
+      <button class="btn" onclick="location.href='delulu.html'">Delulu Dreams 💭</button>
+      <button class="btn" onclick="location.href='ehanie.html'">Ehanie 🐾</button>
+      <button class="btn" onclick="location.href='selflesssister.html'">Selfless Sister 💗</button>
+      <button class="btn" onclick="location.href='divinecomfort.html'">Faith & Peace 🌙</button>
+    </div>
+  </main>
+
+  <footer>
+    Made with endless love 💖 by your best friend.
+  </footer>
+</body>
+</html>

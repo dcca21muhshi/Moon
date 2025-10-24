@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaju’s Delulu Bucket List 💭✨</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&display=swap');
+
+    body {
+      background: linear-gradient(135deg, #ffe9f3, #fff2f8, #fde6f2);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #5a4b55;
+      padding: 40px;
+      overflow-x: hidden;
+      position: center;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    .page {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+}
+      .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+    nav {
+      background:none;
+      box-shadow: 0;
+      border-bottom: 0;
+      padding: 15px 0;
+      position: center;
+      top: 10;
+      z-index: 10;
+    }
+    nav a {
+      color: #d63384;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      color: #ff8fb1;
+      font-size: 2.7rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #ffadc9;
+      margin-bottom: 40px;
+      font-size: 1.1rem;
+    }
+
+    .bucket-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      justify-content: center;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .note {
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(255, 182, 193, 0.5);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+    }
+
+    .note:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(255, 182, 193, 0.6);
+    }
+
+    .note h3 {
+      color: #ff5f9e;
+      font-family: 'Dancing Script', cursive;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .note p {
+      font-size: 0.95rem;
+      color: #6a5963;
+      margin-bottom: 10px;
+    }
+    .floating-decor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* so you can still click things below */
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* general image style */
+.decor {
+  position: absolute;
+  width: 90px;
+  opacity: 0.9;
+  animation: floaty 8s ease-in-out infinite alternate;
+  transition: transform 0.3s ease;
+}
+
+.decor:hover {
+  transform: scale(1.1);
+}
+
+/* individual placements */
+.ferrero {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.islamic {
+  bottom: 15%;
+  right: 5%;
+  width: 120px;
+  animation-delay: 1s;
+}
+
+.eiffel {
+  top: 10%;
+  right: 12%;
+  width: 100px;
+  animation-delay: 2s;
+}
+
+.maldives {
+  bottom: 10%;
+  left: 0%;
+  width: 110px;
+  animation-delay: 3s;
+}
+
+/* smooth float motion */
+@keyframes floaty {
+  from {
+    transform: translateY(0px) rotate(0deg);
+  }
+  to {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+    .status {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #ff85b3;
+      text-align: right;
+    }
+
+    .status.done {
+      color: #91c788;
+    }
+
+    /* pastel sticky notes */
+    .note:nth-child(1) { background: #ffe8ef; }
+    .note:nth-child(2) { background: #fdf1ff; }
+    .note:nth-child(3) { background: #e8faff; }
+    .note:nth-child(4) { background: #fff9e8; }
+    .note:nth-child(5) { background: #f5ecff; }
+    .note:nth-child(6) { background: #eafff0; }
+
+    /* Floating sparkles + hearts */
+    .float {
+      position: fixed;
+      font-size: 1.6rem;
+      animation: float 10s linear infinite;
+      opacity: 0.6;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0.8; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    .float:nth-child(odd) { animation-duration: 12s; }
+    .float:nth-child(even) { animation-duration: 15s; }
+
+    .back {
+      display: block;
+      margin: 50px auto 0;
+      text-align: center;
+      color: #ff85b3;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .back:hover {
+      color: #ff5f9e;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Her</a>
+      <a href="memories.html" class="nav-link active">Our Memories</a>
+      <a href="wishes.html" class="nav-link">Wishes</a>
+      <a href="delulu.html">Delulu </a>
+       <a href="ehanie.html">🐾</a>
+       <a href="chapter.html" class="nav-link">V</a>
+       <a href="surprise.html" class="nav-link">Surprise</a>
+      <a href="divinecomfort.html" class="nav-link">For you🌙</a>
+    </nav>
+  </header>
+  <!-- Floating sparkles + hearts -->
+  <div class="float" style="left:5%; animation-delay:0s;">💞</div>
+  <div class="float" style="left:25%; animation-delay:3s;">✨</div>
+  <div class="float" style="left:45%; animation-delay:5s;">💖</div>
+  <div class="float" style="left:65%; animation-delay:2s;">🌸</div>
+  <div class="float" style="left:85%; animation-delay:4s;">💫</div>
+
+  <h1><b>Shaju’s Delulu Bucket List 💭</b></h1>
+  <div class="subtitle">A scrapbook of dreams, chaos, and unstoppable main character energy 💅✨</div>
+  <!-- floating decorative images -->
+<div class="floating-decor">
+  <img src="fer.png" class="decor ferrero" alt="Ferrero Rocher">
+  <img src="fer.png" class="decor islamic" alt="Islamic Girl">
+  <img src="par.png" class="decor eiffel" alt="Eiffel Tower">
+  <img src="div.png" class="decor maldives" alt="Maldives">
+</div>
+
+  <div class="bucket-list">
+
+    <div class="note">
+      <h3>Paris Photoshoot</h3>
+      <p>Under the Eiffel Tower with a pink beret and croissant, posing like it’s Vogue cover day!</p>
+      <div class="status">💭</div>
+    </div>
+
+    <div class="note">
+      <h3>Ferrero Rocher House</h3>
+      <p> what's wrong with wanting a house that's edible  ?— delulu? Nah, destiny </p>
+      <div class="status">💫</div>
+    </div>
+
+    <div class="note">
+      <h3>🏝️ Maldives Getaway[Better with her better half ahem!😌]</h3>
+      <p>Floating breakfast, sun-kissed selfies, and crystal waters that match her vibe 🌺</p>
+      <div class="status">In Sha Allah </div>
+    </div>
+
+    <div class="note">
+      <h3>📸 Modesty Modelling</h3>
+      <p>“Modesty modelling embraces elegance with grace — showcasing style that reflects confidence, dignity, and self-respect without compromise.”</p>
+      <div class="status">In Sha Allah 💖</div>
+    </div>
+
+    <div class="note">
+      <h3>🎓 Boss Woman Era</h3>
+      <p>Chic office looks, coffee in one hand, confidence in the other ☕💅</p>
+      <div class="status">In Sha Allah</div>
+    </div>
+
+    <div class="note">
+      <h3>💍 “That” Nikkah</h3>
+      <p>Under fairy lights, with Ehanie in a tiny bowtie watching from the corner 🐾</p>
+      <div class="status">In Sha Allah</div>
+    </div>
+
+  </div>
+
+  <a href="index.html" class="back">← Back to Home</a>
+</body>
+</html>

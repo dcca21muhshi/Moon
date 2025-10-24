@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shaju's 22</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #fff0f5, #ffe6f2);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      color: #d63384;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    .page {
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+}
+    .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+    nav {
+      background:none;
+      box-shadow: 0;
+      border-bottom: 0;
+      padding: 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav a {
+      color: #d63384;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-top: 30px;
+      color: #cc2b7e;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin: 10px 0 30px;
+      color: #6b4b5e;
+    }
+/* 🌸 Fix for hidden or off-screen anchor links */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgba(255, 240, 245, 0.85); /* slight contrast */
+  padding: 10px 0;
+  position: relative;
+  z-index: 20; /* ensures it stays above floating items */
+}
+
+nav a {
+  display: inline-block;
+  color: #b64c7a;
+  background: #fff0f7;
+  padding: 10px 18px;
+  margin: 6px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95em;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(214, 51, 132, 0.2);
+}
+
+nav a:hover {
+  background: #ffd6e8;
+  transform: scale(1.05);
+}
+
+/* 🌷 Adjust for mobile view */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    width: auto;
+    min-width: 120px;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 5px;
+  }
+}
+
+/* 💖 Prevent decor from covering nav */
+.petal, .decor, .floating-item {
+  pointer-events: none;
+  z-index: 1;
+}
+    /* Instagram-style gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px 40px 60px;
+    }
+
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 5px solid #ffe6f2;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: white;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(214, 51, 132, 0.3);
+    }
+
+    footer {
+      background: white;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #a66b8a;
+      border-top: 2px solid #ffd6e8;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Her</a>
+      <a href="memories.html" class="nav-link">Our Memories</a>
+      <a href="wishes.html" class="nav-link">Wishes</a>
+       <a href="delulu.html" class="nav-link">Delulu </a>
+      <a href="ehanie.html" class="nav-link">🐾</a>
+      <a href="chapter.html" class="nav-link">V</a>
+      <a href="surprise.html" class="nav-link">Surprise</a>
+      <a href="divinecomfort.html" class="nav-link">For you🌙</a>
+    </nav>
+    <div class="controls">
+      <button id="confetti-btn" class="btn">Celebrate 🎊</button>
+    </div>
+  </header>
+
+  <main class="container home">
+    <section class="hero-card">
+      <div class="heart-bg" aria-hidden="true"></div>
+      <h1>Barakallah, <span class="accent">Shaju on your 22</span>! 🎀💋🌸</h1>
+      <p class="lead">To my lav 💎 — your smile lights up every room. Here's a little love made surprise in our coding way just for you 💖</p>
+
+    </section>
+
+    <section class="floating-hearts" aria-hidden="true"></section>
+
+    <section class="gallery-preview">
+      <h2>She is the FANATSY🌌🦋✨</h2>
+      <div class="photo-row" class="gallery">
+        <img src="sh1.jpeg" alt="Photo 1 - My FAV" style="width: 400px; height: 400px; object-fit: cover" class="soft-frame" />
+        <img src="sh4.jpeg" alt="Photo 2 - replace me"style="width: 400px; height: 400px; object-fit: cover" class="soft-frame" />
+        <img src="sh2.jpeg" alt="Photo 3 - replace me" style="width: 400px; height: 400px; object-fit: cover" class="soft-frame" />
+      </div>
+    </section>
+    
+  </main>
+
+  <footer class="site-footer">
+    <p>Made with 💖 for Shaju •</p>
+  </footer>
+
+  <!-- Confetti canvas -->
+  <canvas id="confetti-canvas"></canvas>
+  <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
