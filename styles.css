@@ -13,15 +13,7 @@
 
 *{box-sizing:border-box}
 html,body{height:100%}
-body{
-  margin:0;
-  background: linear-gradient(180deg, #fff7fb 0%, #fff2f7 100%);
-  color:#222;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
-  min-height:100vh;
-}
+
 .soft-frame {
   width: 350px;
   height: 450px;
@@ -39,21 +31,7 @@ body{
   justify-content: center;
 }
 
-/* Header */
-.site-header{
-  width:100%;
-  display:flex;
-  gap:1rem;
-  align-items:center;
-  justify-content:space-between;
-  padding:12px 18px;
-  position:sticky;
-  top:0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.7), rgba(255,255,255,0.35));
-  backdrop-filter: blur(6px);
-  z-index:30;
-  border-bottom:1px solid rgba(200,170,190,0.15);
-}
+
 .brand a{font-weight:700; color:var(--accent); text-decoration:none; font-size:1.05rem}
 .nav{display:flex; gap:.5rem; align-items:center}
 .nav-link{padding:8px 12px; border-radius:999px; text-decoration:none; color:#6b6b7a}
